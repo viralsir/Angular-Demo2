@@ -1,0 +1,8 @@
+<p>property-binding works!</p>
+
+<h1 [innerHTML]="msg" [style]="style"> </h1>
+<h1>{{msg}}</h1>
+
+<input type="button" value="normal" disabled>
+<input type="button" value="string" disabled="{{f1}}">
+<input type="button" value="property binding" [disabled]="f2">
