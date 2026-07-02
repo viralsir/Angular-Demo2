@@ -1,0 +1,61 @@
+<p>control-structure works!</p>
+Roll No: <input type="number" [(ngModel)]="rollno" > <br/>
+Name : <input type="text" [(ngModel)]="name"><br/>
+Maths : <input type="number" [(ngModel)]="maths"> <br/>
+Science : <input type="number" [(ngModel)]="science"><br/>
+<input type="button" value="save" (click)="save()">
+
+
+<hr>
+<table class="table table-success table-striped">
+  <tr>
+  @for (element of title; track $index) {
+      <td>{{element}}</td>
+
+  }
+  </tr>
+  @for (student of student_array; track $index) {
+    <tr>
+      <td> {{student.rollno}}</td> <td> {{student.name}} </td> <td> {{student.maths}}</td> <td> {{student.science}} </td>
+
+        @if (student.maths>=35 && student.science>=35){
+           <td style="color:green"> Pass </td>
+        }
+        @else{
+          <td style="color:red"> Fail </td>
+        }
+
+    </tr>
+  }
+</table>
+
+<!--@if(maths<0  || maths>100){-->
+<!--  <h5 style="color:red">Invalid Maths marks</h5>-->
+<!--}-->
+<!--<br/>-->
+
+
+
+<!--roll no: {{rollno}} <br>-->
+<!--@if (maths>=35 && science>=35){-->
+<!--   <h1 style="color:green"> Pass </h1>-->
+<!--}-->
+<!--@else{-->
+<!--  <h1 style="color:red"> Fail </h1>-->
+<!--}-->
+<!--{{maths+science}}-->
+<!--@if((maths+science)/2 > 90)-->
+<!--{-->
+<!--  <h5> Grade :A</h5>-->
+<!--}-->
+<!--@else if((maths+science)/2>70)-->
+<!--{-->
+<!--  <h5> Grade :B</h5>-->
+<!--}-->
+<!--@else if((maths+science)/2>50)-->
+<!--{-->
+<!--  <h5>Grade :C</h5>-->
+<!--} @else {-->
+<!--  <h5>Grade :D</h5>-->
+<!--}-->
+

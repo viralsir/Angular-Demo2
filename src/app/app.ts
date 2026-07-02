@@ -5,10 +5,11 @@ import {Component2} from '../component2/component2';
 import {PropertyBinding} from '../property-binding/property-binding';
 import {EventBinding} from '../event-binding/event-binding';
 import {TwowayBinding} from '../twoway-binding/twoway-binding';
+import {ControlStructure} from '../control-structure/control-structure';
 
 @Component({
   selector: 'main-root',
-  imports: [RouterOutlet, Component1, Component2, PropertyBinding, EventBinding, TwowayBinding],
+  imports: [RouterOutlet, Component1, Component2, PropertyBinding, EventBinding, TwowayBinding, ControlStructure],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
