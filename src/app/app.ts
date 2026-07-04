@@ -7,10 +7,13 @@ import {EventBinding} from '../event-binding/event-binding';
 import {TwowayBinding} from '../twoway-binding/twoway-binding';
 import {ControlStructure} from '../control-structure/control-structure';
 import {ParentComponent} from '../parent-component/parent-component';
+import {GreetingComponent1} from '../greeting-component1/greeting-component1';
+import {StudentEntry} from '../student-entry/student-entry';
+import {StudentView} from '../student-view/student-view';
 
 @Component({
   selector: 'main-root',
-  imports: [RouterOutlet, Component1, Component2, PropertyBinding, EventBinding, TwowayBinding, ControlStructure, ParentComponent],
+  imports: [RouterOutlet, Component1, Component2, PropertyBinding, EventBinding, TwowayBinding, ControlStructure, ParentComponent, GreetingComponent1, StudentEntry, StudentView],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

@@ -1,0 +1,14 @@
+<p>student-view works!</p>
+
+<table>
+  <tr>
+    <th> Roll No</th> <th> Name</th> <th>Maths</th> <th>Science</th>
+  </tr>
+  @for (student of this.student_service.students; track $index)
+  {
+      <tr>
+        <td> {{student._rollno}}</td> <td>{{student._name}}</td> <td>{{student._maths}}</td><td>{{student._science}}</td>
+      </tr>
+
+  }
+</table>
