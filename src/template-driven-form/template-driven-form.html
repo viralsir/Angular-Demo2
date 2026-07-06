@@ -1,0 +1,17 @@
+<p>template-driven-form works!</p>
+<form #ProductForm="ngForm" method="get" (submit)="save(ProductForm)">
+
+  Product ID : <input type="number" name="id" ngModel required min="0"> <br/>
+  @if (ProductForm.value.id<0) {
+     <h1 style="color:red"> invalid id </h1>
+  }
+  Product Name : <input type="text" name="name" ngModel required minlength="4"> <br/>
+  Product Qty : <input type="number" name="qty" ngModel > <br/>
+  Product Rate : <input type="number" name="rate" ngModel> <br/>
+
+  <input type="submit" value="save" [disabled]="ProductForm.invalid" > <input type="reset" value="clear">
+
+
+</form>
+valid :{{ProductForm.valid} <br/>
+invalid : {{ProductForm.invalid}}
