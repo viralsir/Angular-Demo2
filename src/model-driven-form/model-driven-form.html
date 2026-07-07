@@ -1,0 +1,28 @@
+<p>model-driven-form works!</p>
+
+<form [formGroup]="productForm" (submit)="save()">
+
+  Product Id : <input type="number" formControlName="id"> <br/>
+  @if(productForm.value.id<0){
+     <h1 style="color: red">invalid id</h1>
+  }
+  Product Name : <input type="text" formControlName="name"> <br/>
+  Product Qty : <input type="number" formControlName="qty"> <br/>
+  Product Rate : <input type="number" formControlName="rate"> <br/>
+
+  <input type="submit" value="save" [disabled]="productForm.invalid"> <input type="reset" value="clear">
+
+</form>
+<hr/>
+<table>
+  <tr>
+    <td> Id</td> <td>Name</td> <td>Qty</td> <td>Rate</td>
+  </tr>
+  @for (product of this.productlist; track $index) {
+
+    <tr>
+      <td>{{product.id}}</td> <td>{{product.name}}</td> <td>{{product.qty}}</td><td>{{product.rate}}</td>
+    </tr>
+
+  }
+</table>

@@ -1,0 +1,13 @@
+<p>post-component works!</p>
+<br/>
+<input type="button" value="load data" (click)="loaddata()">
+<table>
+   <tr>
+     <th>UserId</th> <th>id</th> <th>title</th> <th>body</th>
+   </tr>
+  @for (post of this.posts; track $index) {
+       <tr>
+         <td>{{post.userId}}</td><td>{{ post.id }}</td>  <td>{{post.title}}</td> <td>{{post.body}}</td>
+       </tr>
+  }
+</table>
