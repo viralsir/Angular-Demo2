@@ -1,0 +1,14 @@
+<p>author-component works!</p>
+<input type="button" value="load" (click)="onloaddata()">
+<table>
+  <tr>
+    <th>Id</th> <th> Name</th> <th> Email</th>
+  </tr>
+  @for (author of this.authors; track $index) {
+
+    <tr>
+      <td>{{author.id}}</td> <td>{{author.name}}</td> <td>{{author.email}}</td>
+    </tr>
+
+  }
+</table>
