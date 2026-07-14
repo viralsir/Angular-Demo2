@@ -1,0 +1,9 @@
+<p>tmf-form works!</p>
+<form #loginform="ngForm" (submit)="save(loginform)">
+  Product Id : <input type="text" name="id" ngModel> <br/>
+  Product Name : <input type="text" name="name" ngModel> <br/>
+  Product Qty : <input type="number" name="qty" ngModel> <br/>
+  Product Rate : <input type="number" name="rate" ngModel>
+
+  <input type="submit" value="save"> <input type="reset" value="clear">
+</form>

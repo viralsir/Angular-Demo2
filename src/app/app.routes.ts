@@ -7,6 +7,7 @@ import {StudentView} from '../student-view/student-view';
 import {PostComponent} from '../post-component/post-component';
 import {Author} from '../author';
 import {AuthorComponent} from '../author-component/author-component';
+import {PrimngDemo} from '../primng-demo/primng-demo';
 
 export const routes: Routes = [
   { path: 'c1',component:Component1 },
@@ -16,4 +17,5 @@ export const routes: Routes = [
   { path:"view",component:StudentView},
   { path:"posts",component:PostComponent},
   {path:'authors',component:AuthorComponent},
+  {path:"png" , component:PrimngDemo}
 ];
